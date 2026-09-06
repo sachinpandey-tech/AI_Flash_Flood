@@ -1,0 +1,19 @@
+# Datasets & Geospatial Data
+data/*.csv
+data/*.geojson
+data/*.tif
+
+# Generated Output Plots
+*.png
+
+# Saved Trained Models (if heavy)
+models/*.pkl
+models/*.h5
+models/*.onnx
+
+# Python & Environment
+__pycache__/
+*.pyc
+.env
+venv/
+.vscode/

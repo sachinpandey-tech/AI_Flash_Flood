@@ -1,0 +1,8 @@
+event_title,latitude,longitude,event_date,precip_24h_mm,precip_3day_api_mm,soil_moisture_swvl1,target
+Joshimath Landslide,30.55,79.56,2021-02-07,0.29,81.24,0.3136,1
+Chamoli Debris Flow,30.38,79.73,2021-02-07,0.01,88.29,0.1916,1
+Rainagar Slope Failure,30.48,79.62,2021-05-20,1165.32,1733.5,0.4288,1
+Pipalkoti Road Block,30.43,79.43,2021-07-12,1133.01,2067.83,0.4454,1
+Helang Debris Slide,30.52,79.51,2021-08-28,1508.55,2507.69,0.4287,1
+Nandaprayag Rockfall,30.33,79.32,2021-09-18,1.55,236.04,0.4319,1
+Badrinath Highway Slide,30.74,79.49,2021-10-18,1485.26,1553.01,0.3958,1
