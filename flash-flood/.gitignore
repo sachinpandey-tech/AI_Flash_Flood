@@ -14,6 +14,7 @@ models/*.onnx
 # Python & Environment
 __pycache__/
 *.pyc
-.env
+.
 venv/
 .vscode/
+app.py
