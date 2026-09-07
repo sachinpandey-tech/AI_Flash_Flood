@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HimaGuard Citizen Emergency Portal | Bhairavpur</title>
+  <link rel="stylesheet" href="css/command-center.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #080e1a;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      min-height: 100vh;
+    }
+    .citizen-phone-wrapper {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .emergency-hero-card {
+      background: linear-gradient(180deg, #7f1d1d, #450a0a);
+      border: 2px solid #ef4444;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.35);
+      animation: pulse-border 2s infinite;
+    }
+    .lead-countdown-dial {
+      background: rgba(0, 0, 0, 0.4);
+      border: 3px solid #ef4444;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .shelter-highlight-card {
+      background: #0d1b2a;
+      border: 2px solid #10b981;
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+    @keyframes pulse-border {
+      0%, 100% { border-color: #ef4444; }
+      50% { border-color: #f87171; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="citizen-phone-wrapper">
+    
+    <!-- Top Header -->
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="font-size: 1.5rem;">🏔️</span>
+        <div>
+          <strong style="color: #fff; font-size: 1.1rem; display: block; line-height: 1;">HimaGuard</strong>
+          <span style="font-size: 0.65rem; color: #38bdf8; text-transform: uppercase;">Public Early Warning Network</span>
+        </div>
+      </div>
+      <a href="index.html" class="btn btn-sm btn-outline" style="font-size: 0.72rem;">← Authority Console</a>
+    </div>
+
+    <!-- Location Pill -->
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 6px 14px; font-size: 0.8rem; color: #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+      <span>📍 Detected Location: <strong>Bhairavpur (Mandakini Reach)</strong></span>
+      <span style="color: #10b981; font-weight: bold; font-size: 0.72rem;">● GPS ACCURATE</span>
+    </div>
+
+    <!-- Critical Hero Warning Banner (Section 17) -->
+    <div class="emergency-hero-card">
+      <span style="background: #ef4444; color: #fff; font-size: 0.75rem; font-weight: 900; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.05em;">
+        🚨 CRITICAL FLASH FLOOD WARNING
+      </span>
+
+      <div class="lead-countdown-dial">
+        <span style="font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1;" id="citizenCount">42</span>
+        <span style="font-size: 0.7rem; color: #fca5a5; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Minutes Lead Time</span>
+      </div>
+
+      <h2 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
+        Your area may experience dangerous flash flooding.
+      </h2>
+
+      <div style="background: rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 800; color: #fecdd3;">
+        RECOMMENDED ACTION: MOVE TO HIGHER GROUND IMMEDIATELY
+      </div>
+    </div>
+
+    <!-- Nearest Safe Shelter Card (Section 17) -->
+    <div class="shelter-highlight-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <span style="font-size: 0.75rem; color: #10b981; font-weight: 800; text-transform: uppercase;">
+          🟢 NEAREST DESIGNATED SAFE SHELTER
+        </span>
+        <span class="status-badge badge-low">OPEN & READY</span>
+      </div>
+
+      <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 0.25rem;">
+        🏫 Govt Inter College Elevated Campus
+      </h3>
+      <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.75rem;">
+        Upper Ridge Plateau • Capacity: <strong>750 Persons</strong>
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: 8px; font-size: 0.82rem; margin-bottom: 0.75rem;">
+        <div>Distance: <strong style="color: #38bdf8;">850 meters (10 min walk)</strong></div>
+        <div>Elevation Gain: <strong style="color: #10b981;">+35m Above River</strong></div>
+        <div>Route: <strong>North-East Ridge Road</strong></div>
+        <div>Food & Medical: <strong style="color: #10b981;">Supplies Stocked</strong></div>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%; font-size: 0.95rem;" onclick="alert('Opening Google Maps / Offline GPS walking route to Govt Inter College Elevated Campus.')">
+        🗺️ VIEW SAFE WALKING ROUTE
+      </button>
+    </div>
+
+    <!-- Emergency Instructions: Do's and Don'ts -->
+    <div class="cmd-card">
+      <h3 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem;">
+        📋 Critical Safety Instructions for Residents
+      </h3>
+      <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.82rem; color: #cbd5e1;">
+        <div><strong class="text-emerald-400">✓ DO:</strong> Pack emergency go-bag (medicines, torch, ID, phone).</div>
+        <div><strong class="text-emerald-400">✓ DO:</strong> Switch off home main electricity breaker before vacating.</div>
+        <div><strong class="text-rose-400">✕ NEVER:</strong> Do NOT attempt to cross flowing culverts or muddy streams.</div>
+        <div><strong class="text-rose-400">✕ NEVER:</strong> Do NOT stay in basement or low-lying riverside rooms.</div>
+      </div>
+    </div>
+
+    <!-- Emergency Helpline Hotlines -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+      <a href="tel:1077" class="btn btn-danger" style="font-size: 0.85rem; text-decoration: none;">
+        📞 Call EOC (1077)
+      </a>
+      <a href="tel:112" class="btn btn-outline" style="font-size: 0.85rem; text-decoration: none;">
+        🚑 Emergency (112)
+      </a>
+    </div>
+
+    <div style="text-align: center; font-size: 0.7rem; color: #64748b; padding: 0.5rem;">
+      HimaGuard SIH26192 • State Disaster Management Authority (SDMA) Uttarakhand
+    </div>
+
+  </div>
+
+  <script>
+    // Subtle realistic countdown tick
+    let mins = 42;
+    setInterval(() => {
+      if (mins > 30) {
+        mins--;
+        const el = document.getElementById('citizenCount');
+        if (el) el.textContent = mins;
+      }
+    }, 60000);
+  </script>
+</body>
+</html>
